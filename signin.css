@@ -1,0 +1,161 @@
+/* Salam Pakistan - Sign In */
+.sp-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10, 22, 40, .72);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.sp-overlay.open { display: flex; }
+
+.sp-modal {
+  position: relative;
+  width: min(900px, 100%);
+  max-height: 94vh;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sp-side {
+  position: relative;
+  min-height: 520px;
+  background:
+    linear-gradient(rgba(76, 175, 40, .55), rgba(20, 90, 20, .55)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80")
+    center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sp-side h2 {
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 300;
+  letter-spacing: .5px;
+}
+.sp-side h2 b { font-weight: 800; }
+
+/* ---------- Right form panel ---------- */
+.sp-main { padding: 30px 44px 36px; overflow-y: auto; }
+
+.sp-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #666;
+  cursor: pointer;
+}
+.sp-close:hover { color: #000; }
+
+.sp-tabs { display: flex; margin-bottom: 36px; }
+.sp-tab {
+  flex: 1;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #cfd8c8;
+  padding: 10px 0 16px;
+  font-size: 1.1rem;
+  color: #111;
+  cursor: pointer;
+}
+.sp-tab.active {
+  color: #7cc242;
+  border-bottom: 2px solid #7cc242;
+}
+
+.sp-form { display: none; }
+.sp-form.active { display: block; }
+
+.sp-field {
+  position: relative;
+  margin-bottom: 18px;
+}
+.sp-field > i.lead {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #444;
+  font-size: 1rem;
+}
+.sp-field input {
+  width: 100%;
+  height: 54px;
+  padding: 0 44px 0 44px;
+  border: 1px solid #7cc242;
+  border-radius: 3px;
+  font-size: 1.05rem;
+  color: #222;
+  background: #fff;
+}
+.sp-field input::placeholder { color: #777; }
+.sp-field input:focus {
+  outline: 2px solid rgba(124, 194, 66, .45);
+}
+.sp-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+  color: #666;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.sp-forgot {
+  display: block;
+  margin: -8px 0 10px;
+  text-align: center;
+  background: none;
+  border: 0;
+  width: 100%;
+  font-size: .9rem;
+  color: #111;
+  cursor: pointer;
+}
+.sp-forgot:hover { text-decoration: underline; }
+
+.sp-submit {
+  width: 100%;
+  height: 54px;
+  border: 0;
+  border-radius: 3px;
+  background: #7cc242;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s;
+}
+.sp-submit:hover { background: #5fa52c; }
+.sp-submit:disabled { background: #b5dc82; cursor: wait; }
+
+.sp-msg {
+  min-height: 22px;
+  margin-bottom: 10px;
+  font-size: .92rem;
+  text-align: center;
+}
+.sp-msg.error { color: #c0392b; }
+.sp-msg.success { color: #2e7d32; }
+
+#accountBtn.logged-in { font-weight: 700; }
+
+@media (max-width: 760px) {
+  .sp-modal { grid-template-columns: 1fr; }
+  .sp-side { display: none; }
+  .sp-main { padding: 28px 22px 30px; }
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Salam Pakistan</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Sign In popup CSS -->
+    <link rel="stylesheet" href="signin.css">
+
+</head>
+
+<body>
+
+
+<!--HEADER -->
+
+<header class="header">
+
+    <a class="brand" href="index.html">
+        Salam<span>Pakistan</span>
+    </a>
+
+    <div class="header-tools">
+
+        <!-- WEATHER -->
+        <button id="weatherTop">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <span id="topWeatherText">Islamabad 26°C</span>
+        </button>
+
+        <!-- FAVOURITE -->
+        <button id="favoriteBtn" aria-label="Favourites">
+            <i class="fa-regular fa-heart"></i>
+            Favourites
+        </button>
+
+        <!-- SIGN IN -->
+        <button id="accountBtn">
+            <i class="fa-regular fa-user"></i>
+            Sign In
+        </button>
+
+        <!-- MENU -->
+        <div class="menu-wrapper">
+
+            <button id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+                Menu
+            </button>
+
+            <!-- DROPDOWN -->
+            <div class="menu-dropdown" id="menuDropdown">
+
+                <a href="explore.html">
+                    <i class="fa-solid fa-compass"></i>
+                    Explore Pakistan
+                </a>
+
+                <a href="#weather">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    Weather
+                </a>
+
+                <a href="#destinations">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Destinations
+                </a>
+
+                <a href="evisa.html">
+                    <i class="fa-solid fa-passport"></i>
+                    Apply e-Visa
+                </a>
+
+                <a href="explore.html">
+                    <i class="fa-solid fa-map"></i>
+                    Travel Guide
+                </a>
+
+                <a href="about.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About Pakistan
+                </a>
+
+                <a href="contact.html">
+                    <i class="fa-solid fa-envelope"></i>
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!--  HERO  -->
+
+<main id="home">
+
+<section class="hero">
+
+    <div class="hero-slides">
+
+        <div class="hero-slide active"
+             style="background-image:url('https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=2000&q=90')">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=90')">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2000&q=90')">
+        </div>
+
+    </div>
+
+
+    <div class="hero-shade"></div>
+
+
+    <div class="hero-content">
+
+        <p class="hero-kicker">
+            Salam Pakistan
+        </p>
+
+        <h1 id="heroTitle">
+            Salam from untamed vistas
+        </h1>
+
+        <p id="heroText">
+            Discover the extraordinary beauty of Pakistan.
+        </p>
+
+        <button class="primary-btn" id="heroExplore">
+
+            Explore Pakistan
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- LEFT -->
+    <button class="hero-arrow prev"
+            id="heroPrev"
+            aria-label="Previous">
+
+        <i class="fa-solid fa-chevron-left"></i>
+
+    </button>
+
+
+    <!-- RIGHT -->
+    <button class="hero-arrow next"
+            id="heroNext"
+            aria-label="Next">
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+    </button>
+
+
+    <!-- DOTS -->
+    <div class="hero-dots" id="heroDots"></div>
+
+</section>
+
+
+<!--  WEATHER  -->
+
+<section class="weather-bar" id="weather">
+
+    <div class="weather-title">
+
+        <span class="weather-icon">
+            <i class="fa-solid fa-cloud-sun"></i>
+        </span>
+
+        <div>
+
+            <strong>
+                Weather in Pakistan
+            </strong>
+
+            <small id="weatherCity">
+                Karachi
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <select id="citySelect">
+
+        <option>Islamabad</option>
+        <option>Karachi</option>
+        <option>Lahore</option>
+        <option>Skardu</option>
+        <option>Quetta</option>
+        <option>Peshawar</option>
+
+    </select>
+
+
+    <div class="weather-temp">
+
+        <strong id="temperature">
+            26°C
+        </strong>
+
+        <small id="weatherCondition">
+            Partly Cloudy
+        </small>
+
+    </div>
+
+
+    <div class="weather-days" id="weatherDays">
+
+        <div>
+            <span>Today</span>
+            <i class="fa-solid fa-sun"></i>
+            <b>26°</b>
+        </div>
+
+        <div>
+            <span>Tomorrow</span>
+            <i class="fa-solid fa-cloud-sun"></i>
+            <b>25°</b>
+        </div>
+
+        <div>
+            <span>Saturday</span>
+            <i class="fa-solid fa-cloud"></i>
+            <b>24°</b>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--  DESTINATIONS  -->
+
+<section class="home-section" id="destinations">
+
+    <div class="section-heading">
+
+        <p>EXPLORE</p>
+
+        <h2>
+            Discover Pakistan
+        </h2>
+
+        <span>
+            From majestic mountains to beautiful valleys,
+            discover places worth remembering.
+        </span>
+
+    </div>
+
+
+    <div class="destination-grid" id="destinationGrid"></div>
+
+
+    <div class="center-button">
+
+        <a href="explore.html" class="secondary-btn">
+
+            View All Destinations
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!--  FOOTER  -->
+  
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-grid">
+      <!-- Column 1: Help -->
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Publications</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Cookies Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Third Party Services Disclaimer</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Cities -->
+      <div class="footer-col">
+        <h4>Cities</h4>
+        <ul>
+          <li><a href="#">Islamabad</a></li>
+          <li><a href="#">Lahore</a></li>
+          <li><a href="#">Karachi</a></li>
+          <li><a href="#">Peshawar</a></li>
+          <li><a href="#">Gilgit</a></li>
+          <li><a href="#">Quetta</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Links -->
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#">Special Investment Facilitation Council (SIFC)</a></li>
+          <li><a href="#">Explore Pakistan</a></li>
+          <li><a href="#">Registered Tour Operators</a></li>
+          <li><a href="#">List Of High Peaks</a></li>
+          <li><a href="#">List Of High Treks</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Provincial -->
+      <div class="footer-col">
+        <h4>Provincial/Regional Tourism Departments</h4>
+        <ul>
+          <li><a href="#">PTDC, Islamabad</a></li>
+          <li><a href="#">TDCP, Punjab</a></li>
+          <li><a href="#">STDC, Sindh</a></li>
+          <li><a href="#">KPCTA, Khyber Pakhtunkhwa</a></li>
+          <li><a href="#">Directorate Of Tourism, Balochistan</a></li>
+          <li><a href="#">Tourism & Culture Dept, Gilgit-Baltistan</a></li>
+          <li><a href="#">Tourism & Archaeology Dept, Azad Jammu & Khashmir</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Logos -->
+    <div class="footer-bottom">
+      <div class="footer-logos">
+
+        <img src="pakistan-emblem.jpg" alt="Govt of Pakistan" class="logo1">
+        <img src="ptdc-logo.jpg
+        " alt="PTDC" class="logo2">
+      </div>
+    </div>
+
+  </div>
+
+<!-- SCRIPT  -->
+
+<script src="script.js"></script>
+<script src="signin.js"></script>
+
+</body>
+</html>

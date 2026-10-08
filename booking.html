@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Salam Pakistan</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <a class="brand" href="index.html">Salam<span>Pakistan</span></a>
+
+    <div class="header-tools">
+        <a href="index.html" class="hide-sm"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="explore.html" class="hide-sm"><i class="fa-solid fa-compass"></i> Explore</a>
+
+        <div class="menu-wrapper">
+            <button id="bookBtn"><i class="fa-solid fa-ticket"></i> Booking <i class="fa-solid fa-angle-down small-caret"></i></button>
+            <div class="menu-dropdown" id="bookDropdown">
+                <a href="#booking" data-tab-link="hotels"><i class="fa-solid fa-hotel"></i> Hotels</a>
+                <a href="#booking" data-tab-link="flights"><i class="fa-solid fa-plane"></i> Flights</a>
+                <a href="#booking" data-tab-link="tours"><i class="fa-solid fa-route"></i> Tour Packages</a>
+                <a href="#booking" data-tab-link="cars"><i class="fa-solid fa-car-side"></i> Car Rental</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--HERO -->
+<section class="page-hero"
+         style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85')">
+    <div class="page-hero-inner">
+        <span class="kicker">Plan your trip</span>
+        <h1>Book your <b>journey</b></h1>
+        <p>Hotels, flights, tours and car rental, all in one place.</p>
+    </div>
+</section>
+
+<main>
+    <section class="section anchor" id="booking">
+        <div class="wrap">
+            <div class="section-heading">
+                <p>BOOKING</p>
+                <h2>Book your <b>trip</b></h2>
+                <span>Choose what you need, fill in the details and get your booking reference.</span>
+            </div>
+
+            <div class="bk">
+
+                <div class="bk-tabs">
+                    <button type="button" class="bk-tab active" data-tab="hotels"><i class="fa-solid fa-hotel"></i> <span>Hotels</span></button>
+                    <button type="button" class="bk-tab" data-tab="flights"><i class="fa-solid fa-plane"></i> <span>Flights</span></button>
+                    <button type="button" class="bk-tab" data-tab="tours"><i class="fa-solid fa-route"></i> <span>Tours</span></button>
+                    <button type="button" class="bk-tab" data-tab="cars"><i class="fa-solid fa-car-side"></i> <span>Car Rental</span></button>
+                </div>
+
+                <div class="bk-body">
+
+                    <!-- HOTELS -->
+                    <form class="bk-form active" data-form="hotels" novalidate>
+                        <div class="bk-grid">
+                            <div class="field full">
+                                <label for="h_city">Destination</label>
+                                <select id="h_city" name="h_city">
+                                    <option value="">Select city or valley</option>
+                                    <option>Islamabad</option><option>Lahore</option><option>Karachi</option>
+                                    <option>Peshawar</option><option>Murree</option><option>Hunza</option>
+                                    <option>Skardu</option><option>Swat</option><option>Naran</option>
+                                </select>
+                                <div class="err">Please choose a destination.</div>
+                            </div>
+                            <div class="field">
+                                <label for="h_in">Check-in</label>
+                                <input type="date" id="h_in" name="h_in">
+                                <div class="err">Choose a check-in date.</div>
+                            </div>
+                            <div class="field">
+                                <label for="h_out">Check-out</label>
+                                <input type="date" id="h_out" name="h_out">
+                                <div class="err">Check-out must be after check-in.</div>
+                            </div>
+                            <div class="field">
+                                <label for="h_guests">Guests</label>
+                                <input type="number" id="h_guests" name="h_guests" value="2" min="1" max="12">
+                                <div class="err">Enter 1 to 12 guests.</div>
+                            </div>
+                            <div class="field">
+                                <label for="h_rooms">Rooms</label>
+                                <input type="number" id="h_rooms" name="h_rooms" value="1" min="1" max="6">
+                                <div class="err">Enter 1 to 6 rooms.</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i> Book hotel</button>
+                    </form>
+
+                    <!-- FLIGHTS -->
+                    <form class="bk-form" data-form="flights" novalidate>
+                        <div class="radio-row">
+                            <label><input type="radio" name="trip" value="return" checked> Return</label>
+                            <label><input type="radio" name="trip" value="one-way"> One way</label>
+                        </div>
+                        <div class="bk-grid">
+                            <div class="field">
+                                <label for="f_from">From</label>
+                                <select id="f_from" name="f_from">
+                                    <option value="">Select city</option>
+                                    <option>Islamabad</option><option>Lahore</option><option>Karachi</option>
+                                    <option>Peshawar</option><option>Quetta</option><option>Multan</option>
+                                    <option>Faisalabad</option><option>Sialkot</option><option>Skardu</option><option>Gilgit</option>
+                                </select>
+                                <div class="err">Choose where you fly from.</div>
+                            </div>
+                            <div class="field">
+                                <label for="f_to">To</label>
+                                <select id="f_to" name="f_to">
+                                    <option value="">Select city</option>
+                                    <option>Islamabad</option><option>Lahore</option><option>Karachi</option>
+                                    <option>Peshawar</option><option>Quetta</option><option>Multan</option>
+                                    <option>Faisalabad</option><option>Sialkot</option><option>Skardu</option><option>Gilgit</option>
+                                </select>
+                                <div class="err">Choose a different destination.</div>
+                            </div>
+                            <div class="field">
+                                <label for="f_cabin">Class</label>
+                                <select id="f_cabin" name="f_cabin">
+                                    <option>Economy</option><option>Premium Economy</option><option>Business</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="f_dep">Departure</label>
+                                <input type="date" id="f_dep" name="f_dep">
+                                <div class="err">Choose a departure date.</div>
+                            </div>
+                            <div class="field">
+                                <label for="f_ret">Return</label>
+                                <input type="date" id="f_ret" name="f_ret">
+                                <div class="err">Return must be on or after departure.</div>
+                            </div>
+                            <div class="field">
+                                <label for="f_pax">Passengers</label>
+                                <input type="number" id="f_pax" name="f_pax" value="1" min="1" max="9">
+                                <div class="err">Enter 1 to 9 passengers.</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn"><i class="fa-solid fa-plane-departure"></i> Book flight</button>
+                    </form>
+
+                    <!-- TOURS -->
+                    <form class="bk-form" data-form="tours" novalidate>
+                        <div class="bk-grid">
+                            <div class="field full">
+                                <label for="t_pkg">Tour package</label>
+                                <select id="t_pkg" name="t_pkg">
+                                    <option value="">Select a package</option>
+                                    <option>Hunza Explorer (5 days)</option>
+                                    <option>Skardu and Deosai (6 days)</option>
+                                    <option>Swat and Kalam (4 days)</option>
+                                    <option>Naran Kaghan (3 days)</option>
+                                    <option>Lahore Heritage (2 days)</option>
+                                </select>
+                                <div class="err">Please choose a package.</div>
+                            </div>
+                            <div class="field">
+                                <label for="t_start">Start date</label>
+                                <input type="date" id="t_start" name="t_start">
+                                <div class="err">Choose a start date.</div>
+                            </div>
+                            <div class="field">
+                                <label for="t_pax">Travellers</label>
+                                <input type="number" id="t_pax" name="t_pax" value="2" min="1" max="20">
+                                <div class="err">Enter 1 to 20 travellers.</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn"><i class="fa-solid fa-route"></i> Book tour</button>
+                    </form>
+
+                    <!-- CAR RENTAL -->
+                    <form class="bk-form" data-form="cars" novalidate>
+                        <div class="bk-grid">
+                            <div class="field">
+                                <label for="c_city">Pick-up city</label>
+                                <select id="c_city" name="c_city">
+                                    <option value="">Select city</option>
+                                    <option>Islamabad</option><option>Lahore</option><option>Karachi</option>
+                                    <option>Peshawar</option><option>Gilgit</option><option>Skardu</option>
+                                </select>
+                                <div class="err">Please choose a city.</div>
+                            </div>
+                            <div class="field">
+                                <label for="c_pick">Pick-up date</label>
+                                <input type="date" id="c_pick" name="c_pick">
+                                <div class="err">Choose a pick-up date.</div>
+                            </div>
+                            <div class="field">
+                                <label for="c_drop">Return date</label>
+                                <input type="date" id="c_drop" name="c_drop">
+                                <div class="err">Return must be on or after pick-up.</div>
+                            </div>
+                            <div class="field">
+                                <label for="c_type">Car type</label>
+                                <select id="c_type" name="c_type">
+                                    <option value="">Select type</option>
+                                    <option>Sedan</option><option>SUV</option><option>4x4 Jeep</option><option>Van</option>
+                                </select>
+                                <div class="err">Please choose a car type.</div>
+                            </div>
+                        </div>
+                        <label class="check">
+                            <input type="checkbox" name="c_driver">
+                            <span>Include a driver</span>
+                        </label>
+                        <button type="submit" class="btn"><i class="fa-solid fa-car-side"></i> Book car</button>
+                    </form>
+
+                    <p class="bk-note"><i class="fa-solid fa-circle-info"></i> This is a demo for the Salam Pakistan project. No real booking is made and no payment is taken.</p>
+                </div>
+
+                <div class="result" id="bkResult"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MY BOOKINGS -->
+    <section class="section tight">
+        <div class="wrap">
+            <div class="section-heading">
+                <p>YOUR TRIPS</p>
+                <h2>My <b>bookings</b></h2>
+            </div>
+            <div class="bk-list" id="bkList"></div>
+            <div class="bk-none" id="bkNone">No bookings yet. Use the form above to book your first trip.</div>
+        </div>
+    </section>
+
+</main>
+
+<!--  FOOTER  -->
+<footer class="spf">
+    <div class="spf-inner">
+        <div class="spf-brand" style="margin-top:0">
+            <a class="spf-logo" href="index.html">Salam<span>Pakistan</span></a>
+            <p>Discover the beauty, culture and adventures of Pakistan.</p>
+        </div>
+    </div>
+    <p class="spf-copy">&copy; 2026 Salam Pakistan. All Rights Reserved.</p>
+</footer>
+
+<script src="booking.js"></script>
+</body>
+</html>

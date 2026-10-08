@@ -1,0 +1,274 @@
+.explore-header {
+
+    height: 75px;
+
+    padding: 0 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #fff;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.explore-logo {
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+.explore-logo span {
+
+    font-weight: normal;
+}
+
+
+.explore-header nav {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.explore-header nav a {
+
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+.explore-header nav a.active,
+.explore-header nav a:hover {
+
+    color: #16794c;
+}
+
+
+.back-home {
+
+    text-decoration: none;
+
+    color: #16794c;
+
+    font-size: 14px;
+}
+
+
+.explore-hero {
+
+    height: 360px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=90")
+        center / cover;
+}
+
+
+.explore-hero p {
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+.explore-hero h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 12px;
+}
+
+
+.explore-hero span {
+
+    color: rgba(255,255,255,0.9);
+}
+
+
+/* =========================
+   EXPLORE SECTION
+========================= */
+
+.explore-section {
+
+    padding: 70px;
+}
+
+
+.explore-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.explore-heading p {
+
+    color: #16794c;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.explore-heading h2 {
+
+    font-size: 38px;
+
+    margin-top: 8px;
+}
+
+
+.explore-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* CARD */
+
+.explore-card {
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: white;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+
+.explore-card:hover {
+
+    transform: translateY(-6px);
+}
+
+
+.explore-card img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.explore-card-content {
+
+    padding: 20px;
+}
+
+
+.explore-card-content h3 {
+
+    font-size: 21px;
+
+    margin-bottom: 7px;
+}
+
+
+.explore-location {
+
+    color: #16794c;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+
+.explore-card-content p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+
+.detail-btn {
+
+    color: #16794c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+@media (max-width: 800px) {
+
+    .explore-header {
+
+        padding: 0 20px;
+    }
+
+    .explore-header nav {
+
+        display: none;
+    }
+
+    .explore-section {
+
+        padding: 40px 20px;
+    }
+
+    .explore-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply e-Visa | Salam Pakistan</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+
+<!--  HEADER -->
+<header class="header">
+    <a class="brand" href="index.html">Salam<span>Pakistan</span></a>
+
+    <div class="header-tools">
+        <a href="explore.html" class="hide-sm"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <button id="accountBtn"><i class="fa-regular fa-user"></i> Sign In</button>
+
+        <div class="menu-wrapper">
+            <button id="menuBtn"><i class="fa-solid fa-bars"></i> Menu</button>
+            <div class="menu-dropdown" id="menuDropdown">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="explore.html"><i class="fa-solid fa-compass"></i> Explore Pakistan</a>
+                <a href="evisa.html" class="current"><i class="fa-solid fa-passport"></i> Apply e-Visa</a>
+                <a href="explore.html"><i class="fa-solid fa-map"></i> Travel Guide</a>
+                <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Pakistan</a>
+                <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="page-hero"
+         style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85')">
+    <div class="page-hero-inner">
+        <span class="kicker">Visit Pakistan</span>
+        <h1>Apply for your <b>e-Visa</b></h1>
+        <p>Start your journey to the land of mountains, valleys and warm hospitality.</p>
+    </div>
+</section>
+
+<main>
+
+    <section class="section">
+        <div class="wrap">
+            <div class="section-heading">
+                <p>HOW IT WORKS</p>
+                <h2>Four simple <b>steps</b></h2>
+                <span>Fill in the form, get your reference number and keep it safe for your trip.</span>
+            </div>
+
+            <div class="steps">
+                <div class="step"><h3>Fill the form</h3><p>Enter your personal and passport details.</p></div>
+                <div class="step"><h3>Submit</h3><p>Send your request and get a reference number.</p></div>
+                <div class="step"><h3>Track</h3><p>Keep the number to follow your application.</p></div>
+                <div class="step"><h3>Travel</h3><p>Carry a printed copy of your approval.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tight">
+        <div class="wrap">
+            <div class="panel">
+
+                <div class="panel-side"
+                     style="background-image:url('https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=1000&q=80')">
+                    <div>
+                        <h2>Salam <b>Pakistan</b></h2>
+                        <p>Everything you need before you land.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Passport valid 6 months after arrival</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Tourist, business, family and pilgrimage visas</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Reference number issued instantly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel-main">
+                    <h2>Visa <b>application</b></h2>
+                    <p class="sub">All fields are required.</p>
+
+                    <div class="notice">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>This is a demo form for the Salam Pakistan project. Real visa applications must be submitted through Pakistan's official government visa portal.</span>
+                    </div>
+
+                    <form id="visaForm" novalidate>
+                        <div class="row">
+                            <div class="field">
+                                <label for="fullName">Full name (as on passport)</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="e.g. John Smith">
+                                <div class="err">Please enter your full name.</div>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email address</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com">
+                                <div class="err">Please enter a valid email.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field">
+                                <label for="nationality">Nationality</label>
+                                <select id="nationality" name="nationality">
+                                    <option value="">Select country</option>
+                                    <option>Australia</option>
+                                    <option>Canada</option>
+                                    <option>China</option>
+                                    <option>France</option>
+                                    <option>Germany</option>
+                                    <option>Italy</option>
+                                    <option>Japan</option>
+                                    <option>Saudi Arabia</option>
+                                    <option>Turkey</option>
+                                    <option>United Arab Emirates</option>
+                                    <option>United Kingdom</option>
+                                    <option>United States</option>
+                                    <option>Other</option>
+                                </select>
+                                <div class="err">Please select your nationality.</div>
+                            </div>
+                            <div class="field">
+                                <label for="passport">Passport number</label>
+                                <input type="text" id="passport" name="passport" placeholder="e.g. AB1234567">
+                                <div class="err">Enter 6 to 12 letters or numbers.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field">
+                                <label for="visaType">Visa type</label>
+                                <select id="visaType" name="visaType">
+                                    <option value="">Select type</option>
+                                    <option>Tourist</option>
+                                    <option>Business</option>
+                                    <option>Family / Friends visit</option>
+                                    <option>Religious / Pilgrimage</option>
+                                </select>
+                                <div class="err">Please select a visa type.</div>
+                            </div>
+                            <div class="field">
+                                <label for="arrival">Planned arrival date</label>
+                                <input type="date" id="arrival" name="arrival">
+                                <div class="err">Choose a date from today onwards.</div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="expiry">Passport expiry date</label>
+                            <input type="date" id="expiry" name="expiry">
+                            <div class="err">Passport must be valid for at least 6 months after arrival.</div>
+                        </div>
+
+                        <label class="check">
+                            <input type="checkbox" id="agree" name="agree">
+                            <span>I confirm that the information I provided is correct.</span>
+                        </label>
+
+                        <button type="submit" class="btn full">Submit application</button>
+                    </form>
+
+                    <div class="result" id="visaResult">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h3>Application received</h3>
+                        <p>Thank you, <strong id="resultName"></strong>. Your reference number is:</p>
+                        <p class="ref" id="refNumber"></p>
+                        <p>Please save this number.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="spf">
+    <div class="spf-inner">
+        <div class="spf-cols">
+            <div class="spf-col">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Publications</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Third Party Services Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="spf-col">
+                <h3>Cities</h3>
+                <ul>
+                    <li><a href="explore.html">Islamabad</a></li>
+                    <li><a href="explore.html">Lahore</a></li>
+                    <li><a href="explore.html">Karachi</a></li>
+                    <li><a href="explore.html">Peshawar</a></li>
+                    <li><a href="explore.html">Gilgit</a></li>
+                    <li><a href="explore.html">Quetta</a></li>
+                </ul>
+            </div>
+            <div class="spf-col">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="explore.html">Explore Pakistan</a></li>
+                    <li><a href="evisa.html">Apply e-Visa</a></li>
+                    <li><a href="about.html">About Pakistan</a></li>
+                    <li><a href="index.html#weather">Weather</a></li>
+                    <li><a href="index.html#destinations">Destinations</a></li>
+                </ul>
+            </div>
+            <div class="spf-col">
+                <h3>Provincial/Regional Tourism Departments</h3>
+                <ul>
+                    <li><a href="#">PTDC, Islamabad</a></li>
+                    <li><a href="#">TDCP, Punjab</a></li>
+                    <li><a href="#">STDC, Sindh</a></li>
+                    <li><a href="#">KPCTA, Khyber Pakhtunkhwa</a></li>
+                    <li><a href="#">Directorate Of Tourism, Balochistan</a></li>
+                    <li><a href="#">Tourism &amp; Culture Dept, Gilgit-Baltistan</a></li>
+                    <li><a href="#">Tourism &amp; Archaeology Dept, Azad Jammu &amp; Khashmir</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="spf-brand">
+            <a class="spf-logo" href="index.html">Salam<span>Pakistan</span></a>
+            <p>Discover the beauty, culture and adventures of Pakistan.</p>
+        </div>
+    </div>
+
+    <svg class="spf-art" viewBox="0 0 520 420" fill="none" aria-hidden="true">
+        <path d="M20 380 C 40 240, 200 200, 210 300 S 120 400, 190 330 S 330 60, 300 220 S 400 380, 500 120"
+              stroke="#5b7f2b" stroke-width="30" stroke-linecap="round"/>
+        <path d="M250 400 C 270 300, 360 260, 400 330 S 470 400, 510 300"
+              stroke="#5b7f2b" stroke-width="24" stroke-linecap="round"/>
+    </svg>
+
+    <p class="spf-copy">&copy; 2026 Salam Pakistan. All Rights Reserved.</p>
+</footer>
+
+<script src="pages.js"></script>
+<script src="signin.js"></script>
+</body>
+</html>

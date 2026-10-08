@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Pakistan</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="explore.css">
+
+    <style>
+        .explore-header nav .nav-drop { position: relative; display: inline-block; }
+        .explore-header nav .nav-drop > a i { font-size: .7rem; margin-left: 4px; }
+
+        .explore-header nav .nav-drop-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 210px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 8px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, .28);
+            display: none;
+            z-index: 999;
+        }
+        .explore-header nav .nav-drop:hover .nav-drop-menu,
+        .explore-header nav .nav-drop:focus-within .nav-drop-menu { display: block; }
+
+        .explore-header nav .nav-drop-menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 !important;
+            padding: 11px 14px;
+            color: #333 !important;
+            font-size: .95rem;
+            white-space: nowrap;
+            border-radius: 8px;
+            background: none;
+        }
+        .explore-header nav .nav-drop-menu a i { color: #7cc242; width: 18px; text-align: center; margin: 0; font-size: .95rem; }
+        .explore-header nav .nav-drop-menu a:hover { background: #eef6e6; color: #1b5e20 !important; }
+    </style>
+
+</head>
+
+<body>
+
+
+<header class="explore-header">
+
+    <a href="index.html" class="explore-logo">
+        Salam<span>Pakistan</span>
+    </a>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="explore.html" class="active">
+            Explore
+        </a>
+
+        <a href="#favourites">
+            Favourites
+        </a>
+
+        <div class="nav-drop">
+
+            <a href="booking.html">
+                Booking <i class="fa-solid fa-angle-down"></i>
+            </a>
+
+            <div class="nav-drop-menu">
+                <a href="booking.html#booking-hotels"><i class="fa-solid fa-hotel"></i> Hotels</a>
+                <a href="booking.html#booking-flights"><i class="fa-solid fa-plane"></i> Flights</a>
+                <a href="booking.html#booking-tours"><i class="fa-solid fa-route"></i> Tour Packages</a>
+                <a href="booking.html#booking-cars"><i class="fa-solid fa-car-side"></i> Car Rental</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <a href="index.html" class="back-home">
+        <i class="fa-solid fa-arrow-left"></i>
+        Home
+    </a>
+
+</header>
+
+
+<section class="explore-hero">
+
+    <div>
+
+        <p>
+            DISCOVER PAKISTAN
+        </p>
+
+        <h1>
+            Places You'll Never Forget
+        </h1>
+
+        <span>
+            Explore the most beautiful destinations across Pakistan.
+        </span>
+
+    </div>
+
+</section>
+
+
+<section class="explore-section" id="favourites">
+
+    <div class="explore-heading">
+
+        <p>
+            DESTINATIONS
+        </p>
+
+        <h2>
+            Explore Pakistan
+        </h2>
+
+    </div>
+
+
+    <div
+        class="explore-grid"
+        id="exploreGrid">
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div>
+
+        <h2>
+            Salam<span>Pakistan</span>
+        </h2>
+
+        <p>
+            Discover the beauty of Pakistan.
+        </p>
+
+    </div>
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="explore.html">
+            Explore
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script src="explore.js"></script>
+
+</body>
+</html>
